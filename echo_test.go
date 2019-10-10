@@ -1,16 +1,23 @@
 package echo_test
 
 import (
+	"bytes"
 	"testing"
+
+	"github.com/theantichris/echo"
 )
 
 func TestEcho(t *testing.T) {
-	args := []string{"hello", "world"}
+	t.Run("it should write out the commandline-arguments", func(t *testing.T) {
+		args := []string{"echo", "hello", "world"}
+		output := bytes.Buffer{}
 
-	want := "hello world"
-	got := Echo(args)
+		echo.Echo(args, &output)
+		got := output.String()
+		want := "hello world\n"
 
-	if got != want {
-		t.Errorf("got %q want %q", got, want)
-	}
+		if got != want {
+			t.Errorf("got %q want %q", got, want)
+		}
+	})
 }
