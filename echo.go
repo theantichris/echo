@@ -9,8 +9,8 @@ import (
 func Echo(args []string, w io.Writer) {
 	var output, separator string
 
-	for i := 1; i < len(args); i++ {
-		output += separator + args[i]
+	for _, arg := range args[1:] {
+		output += separator + arg
 		separator = " "
 	}
 
