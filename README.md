@@ -1,2 +1,2 @@
-# echo1
+# echo
  A Go implementation of the Unix echo command.
