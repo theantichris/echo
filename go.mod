@@ -1,3 +1,3 @@
-module github.com/theantichris/echo1
+module github.com/theantichris/echo
 
 go 1.13
