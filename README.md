@@ -4,9 +4,10 @@
 
 ## Usage
 
-`echo <-n -s> / <list of strings>`
+```bash
+echo <-n -s> / <list of strings>
 
-## Arguments
-
-* -n Omit printing of newline at the end of the echo. Default: false
-* -s Specify a custom separator. Default: " "
+-n omit trailing newline
+-s string
+    separator (default " ")
+```
